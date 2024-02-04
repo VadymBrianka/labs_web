@@ -1,0 +1,27 @@
+table {
+    margin-right: auto;
+    margin-left: auto;
+    border-collapse: collapse;
+    width: 800px;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-weight:bold;
+}
+
+th {
+    background-color: #3e7db9;
+    color: white;
+    font-weight:100;
+    letter-spacing: 1.5px;
+}
+tr:nth-child(odd){
+    background-color: #d4e5f4;
+}
+tr:hover{
+    background-color: #c6defe;
+}
