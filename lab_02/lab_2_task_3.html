@@ -3,46 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>/* Стиль для списку */
+    <style>
         ul {
-            list-style-type: none; /* Видаляємо стандартні маркери */
-            margin: 0; /* Обнуляємо відступи */
-            padding: 0; /* Обнуляємо відступи */
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             color:black;
             font-family: Arial, Helvetica, sans-serif;
             width:500px;
         }
-
-        /* Стиль для елементів списку */
-        .li1 {
-            border: 1px solid #ddd; /* Додаємо рамку */
-            margin-top: -1px; /* Зменшуємо відстань між елементами */
-            background-color: #a5ccdb; /* Додаємо колір фону */
-            padding: 12px; /* Додаємо відступи */
-            font-size: 18px; /* Збільшуємо розмір шрифту */
+        li{
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            padding: 12px;
+            font-size: 18px;
         }
-        .li2 {
-            border: 1px solid #ddd; /* Додаємо рамку */
-            margin-top: -1px; /* Зменшуємо відстань між елементами */
-            background-color: #add9e6; /* Додаємо колір фону */
-            padding: 12px; /* Додаємо відступи */
-            font-size: 18px; /* Збільшуємо розмір шрифту */
+        li:nth-child(odd){
+            background-color: #a5ccdb;
+        }
+        li:nth-child(even) {
+            background-color: #add9e6;
         }
         li.checked {
             background-color: #888;
         }
         .close {
-            right: 0; /* Вирівнюємо кнопку праворуч */
-            top: 0; /* Вирівнюємо кнопку зверху */
-            padding: 12px 16px; /* Додаємо відступи */
-            color: red; /* Змінюємо колір тексту */
-            border: none; /* Видаляємо рамку */
-            cursor: pointer; /* Змінюємо курсор на покажчик */
+            right: 0;
+            top: 0;
+            padding: 12px 16px;
+            color: red;
+            border: none;
+            cursor: pointer;
             text-decoration: none;
         }
         li.checked .text_of_li{
-            background-color: #888; /* Змінюємо колір фону */
-            text-decoration: line-through; /* Додаємо закреслення тексту */
+            background-color: #888;
+            text-decoration: line-through;
         }
        </style>
     <title>lab_2_task_3</title>
@@ -50,33 +46,27 @@
 <body>
     <h1>My To Do List</h1>
     <ul>
-        <li class = "li1"><input type="checkbox" style="color:black;"> <span class="text_of_li">Hit the gym</span> <span class="close">✕</span></li>
-        <li class = "li2"><input type="checkbox"> <span class="text_of_li">Pay bils</span> <span class="close">✕</span></li>
-        <li class = "li1"><input type="checkbox"> <span class="text_of_li">Meet John</span> <span class="close">✕</span></li>
-        <li class = "li2"><input type="checkbox"> <span class="text_of_li">Buy eggs</span> <span class="close">✕</span></li>
-        <li class = "li1"><input type="checkbox"> <span class="text_of_li">Read a book</span> <span class="close">✕</span></li>
-        <li class = "li2"><input type="checkbox"> <span class="text_of_li">Organize office</span> <span class="close">✕</span></li>
-        <li class = "li1"><input type="checkbox"> <span class="text_of_li">Eat dinner</span> <span class="close">✕</span></li>
-        <li class="li2"><input type="checkbox"> <span class="text_of_li">Buy apples</span> <span class="close">✕</span></li>
-        <li class = "li1"><input type="checkbox"> <span class="text_of_li">Meet Georg</span> <span class="close">✕</span></li>
-        <li class = "li2"><input type="checkbox"> <span class="text_of_li">Feed the cat</span> <span class="close">✕</span></li>
-        <li class = "li1"><input type="checkbox"> <span class="text_of_li">Write a letter</span> <span class="close">✕</span></li>
-        <li class = "li2"><input type="checkbox"> <span class="text_of_li">Run 1 km</span> <span class="close">✕</span></li>
+        <li><input type="checkbox" style="color:black;"> <span class="text_of_li">Hit the gym</span> <span class="close">✕</span></li>
+        <li><input type="checkbox"> <span class="text_of_li">Pay bils</span> <span class="close">✕</span></li>
+        <li><input type="checkbox"> <span class="text_of_li">Meet John</span> <span class="close">✕</span></li>
+        <li><input type="checkbox"> <span class="text_of_li">Buy eggs</span> <span class="close">✕</span></li>
+        <li><input type="checkbox"> <span class="text_of_li">Read a book</span> <span class="close">✕</span></li>
+        <li><input type="checkbox"> <span class="text_of_li">Organize office</span> <span class="close">✕</span></li>
+        <li><input type="checkbox"> <span class="text_of_li">Eat dinner</span> <span class="close">✕</span></li>
+        <li><input type="checkbox"> <span class="text_of_li">Buy apples</span> <span class="close">✕</span></li>
+        <li><input type="checkbox"> <span class="text_of_li">Meet Georg</span> <span class="close">✕</span></li>
+        <li><input type="checkbox"> <span class="text_of_li">Feed the cat</span> <span class="close">✕</span></li>
+        <li><input type="checkbox"> <span class="text_of_li">Write a letter</span> <span class="close">✕</span></li>
+        <li><input type="checkbox"> <span class="text_of_li">Run 1 km</span> <span class="close">✕</span></li>
     </ul>
     <script>
-        // Отримуємо список елементів
         var list = document.querySelector('ul');
-    
-        // Додаємо подію кліку на список
+
         list.addEventListener('click', function(ev) {
-            // Якщо клікнули на чекбокс
             if (ev.target.tagName === 'INPUT') {
-                // Перемикаємо клас виділення для елемента списку
                 ev.target.parentElement.classList.toggle('checked');
             }
-            // Якщо клікнули на кнопку видалення
             if (ev.target.tagName === 'SPAN') {
-                // Видаляємо елемент списку
                 ev.target.parentElement.remove();
             }
         }, false);
