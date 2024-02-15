@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+.container {
+    min-width: 1080px;
+    min-height: 430px;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    flex-direction: row;
+}
+
+.plan {
+    width: 250px;
+    height: 390px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+    margin: 10px;
+    text-align: center;
+    padding: 0 0px 20px 0px;
+    vertical-align: center;
+    transition: all 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.content {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 30px 0px 30px;
+}
+
+h4 {
+    color: rgb(132, 132, 132);
+    font-size: 20px;
+}
+
+.plan h3 {
+    text-transform: uppercase;
+    margin: 25px 0px 0px 0px; 
+}
+
+#enterprise hr {
+    background-color: #B1314D;
+}
+
+#professional hr {
+    background-color: #D7913B;
+}
+
+#standard hr {
+    background-color: #2B6688;
+}
+
+#basic hr {
+    background-color: #62BB34;
+}
+
+button {
+    width: 60%;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.8s;
+    color: white;
+    border: 0px;
+}
+
+.plan:hover{
+    transform: scale(1.2);
+}
+
+#enterprise button {
+    background-color: #B1314D;
+}
+
+#professional button {
+    background-color: #D7913B;
+}
+
+#standard button {
+    background-color: #2B6688;
+}
+
+#basic button {
+    background-color: #62BB34;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0px;
+    padding: 0px;
+}
+.hrs {
+    width: 99%;
+    background-color: #B1314D;
+    height: 4px;
+}
